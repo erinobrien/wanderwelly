@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tip Track</title>
+    <link rel="shortcut icon" href="img/favicon.png"/> 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+         <link rel="stylesheet" href="./css/index.css">
+         <link rel="stylesheet" href="./css/stylesheet.css">
+
+     <script src="./js/weather.js"></script>
+     <script src="./js/jquery-3.3.1.min.js"></script>
+   
+ 
+
+  </head>
+  <body>
+
+<section class="hero" id="home">
+     <!-- Top navigation bar and logo -->
+    <header>
+      <nav class="black_1">
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <a href="index.html">Wander Welly</a>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="index.html#top_suggestions">Top Suggestions</a></li>
+            <li><a href="./all_trails.html">All Trails</a></li>
+            <li><a href="./map.html">Map</a></li>
+            
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+ <!--<div class="w3-row-padding">
+    <div class="w3-col s4">
+     <a href="index.html"><img src="img/back.png"></a>
+    </div>
+    <div class="w3-col s4 w3-center">
+      <h3>S-K Traverse</h3>
+    </div>
+    <div class="w3-col s4">
+    </div>
+  </div>-->
+
+
+
+    <div id="map"></div>
+
+
+<br>
+
+
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-32" id="work">
+  <div class="w3-row-padding" style="text-align: center;">
+    <div class="w3-col s6 m6 l6 w3-center">
+      <img src="img/red_MarkerA.png">
+      <h6>Your Current Location</h6>
+    </div>
+    <div class="w3-col s6 m6 l6 w3-center">
+      <img src="img/red_MarkerB.png">
+      <h6>Start of Trail</h6>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="text-align: center;">
+    <div class="w3-col s0 m2 l2 w3-center">
+      <h6></h6>
+    </div>
+    <div class="w3-col s12 m8 l8 w3-center">
+      <h2>Tip Track</h2>
+    <p>This route is quickly reached by car from downtown Wellington and combines the well-known Tip Track, Red Rocks Track - Pari-Whero, and a beach section (Sinclair Head Track). The route is, in parts, seriously steep and follows exposed ridgelines with exceptional panoramic views towards the ocean as well as the town on the other side</p>
+    </div>
+    <div class="w3-col s0 m2 l2 w3-center">
+      <h6></h6>
+    </div>
+  </div>
+
+<div class="w3-quarter">
+<div class="w3-card">
+  <div class="w3-container">
+  <div class="w3-row-padding w3-center">
+    
+    <div class="w3-col s4">
+      <i class="fa fa-map-marker w3-text-blue w3-xxlarge"></i>
+      <h6>14km</h6>
+    </div>
+    <div class="w3-col s4">
+      <i class="fa fa-signal w3-text-blue w3-xxlarge"></i>
+      <h6>485m</h6>
+    </div>
+       <div class="w3-col s4">
+      <i class="fa fa-undo w3-text-blue w3-xxlarge"></i>
+      <h6>Loop</h6>
+    </div>
+    <br>
+    <br>
+      <div class="w3-row-padding w3-center">
+    <div class="w3-col s4">
+      <i class="fa fa-paw w3-text-blue w3-xxlarge"></i>
+      <h6>Dog friendly</h6>
+    </div>
+    <div class="w3-col s4">
+      <i class="fa fa-eye w3-text-blue w3-xxlarge"></i>
+      <h6>Ocean Views</h6>
+    </div>
+       <div class="w3-col s4">
+      <i class="fa fa-pagelines fa fa-male-female w3-text-blue w3-xxlarge"></i>
+      <h6>Native Bush</h6>
+    </div>
+    <div class="w3-col s12">
+    <button class="w3-btn w3-green w3-round-xxlarge">MEDIUM</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div class="w3-quarter">
+<div class="w3-card">
+  <div class="w3-container">
+  <h3>Trail Type</h3>
+  <p>Gravel</p>
+  <p>Bushland</p>
+  <p>Public Roads</p>
+
+  <h3>Rating</h3>
+  <p>5 stars</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card">
+  <div class="w3-container">
+  <h3>Trail Condition</h3>
+  <p>Great, although very exposed in some areas</p>
+  <h3>Trail Tips</h3>
+  <p>Between kilometer 6 and 10, the track is very exposed and the notorious Wellington winds are not to be underestimated. There are some rocky sections requiring some degree of surefooted-ness. The beach section is mostly gravel with a few sandy stretches</p>
+
+
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card">
+  <div class="w3-container" id="weather">
+  <h3>Weather Conditions</h3>
+
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+</section>
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0R075l8bCPaaAE-2AD0RX6XOTj8qgAfU
+&">
+    </script>
+    <script type="text/javascript">
+      function _width(){
+        var _width = $(window).width();
+        if(_width < 640){
+          $('.logo').addClass('hide');
+        }else{
+          $('.logo').removeClass('hide');
+        }
+      }
+      $(document).ready(function(){
+
+            $(".menu-icon").on("click", function() {
+              $("nav ul").toggleClass("showing");
+              $(".logo").toggleClass("hide");
+            });
+
+            $(window).resize(function() {    
+              _width();  
+            })
+            _width();
+            });
+
+
+//tip track to red rock
+if (navigator.geolocation) { //Checks if browser supports geolocation
+   navigator.geolocation.getCurrentPosition(function (position) {                                                              //This gets the
+     var latitude = position.coords.latitude;                    //users current
+     var longitude = position.coords.longitude;                 //location
+     var coords = new google.maps.LatLng(latitude, longitude); //Creates variable for map coordinates
+     var directionsService = new google.maps.DirectionsService();
+     var directionsDisplay = new google.maps.DirectionsRenderer();
+     var mapOptions = //Sets map options
+     {
+       zoom: 15,  //Sets zoom level (0-21)
+       center: coords, //zoom in on users location
+       mapTypeControl: true, //allows you to select map type eg. map or satellite
+       navigationControlOptions:
+       {
+         style: google.maps.NavigationControlStyle.SMALL //sets map controls size eg. zoom
+       },
+       mapTypeId: google.maps.MapTypeId.ROADMAP //sets type of map Options:ROADMAP, SATELLITE, HYBRID, TERRIAN
+     };
+     map = new google.maps.Map( /*creates Map variable*/ document.getElementById("map"), mapOptions /*Creates a new map using the passed optional parameters in the mapOptions parameter.*/);
+     directionsDisplay.setMap(map);
+     directionsDisplay.setPanel(document.getElementById('panel'));
+    
+
+
+     var request = {
+       origin: coords, //A
+       destination: '-41.348285, 174.749732', //Start of trail (B)
+       travelMode: google.maps.DirectionsTravelMode.WALKING
+     };
+
+     directionsService.route(request, function (response, status) {
+       if (status == google.maps.DirectionsStatus.OK) {
+         directionsDisplay.setDirections(response);
+       }
+     });
+
+     //directionsService = new google.maps.DirectionsService();
+        directionsDisplay2 = new google.maps.DirectionsRenderer({
+          suppressMarkers: true,
+          suppressInfoWindows: true
+        });
+        directionsDisplay2.setMap(map);
+
+        var request = {
+          origin: '-41.348285, 174.749732', //Start of trail (B)
+          destination: '-41.335371, 174.744877', //1st crossroad
+          travelMode: google.maps.DirectionsTravelMode.WALKING
+        };
+        directionsService.route(request, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay2.setDirections(response);
+          }
+        });
+
+          directionsDisplay3 = new google.maps.DirectionsRenderer({
+          suppressMarkers: true,
+          suppressInfoWindows: true
+        });
+        directionsDisplay3.setMap(map);
+
+        var request = {
+          origin: '-41.335371, 174.744877', //1st crossroad
+          destination: '-41.333673, 174.740715',//2nd crossroad
+          travelMode: google.maps.DirectionsTravelMode.WALKING
+        };
+        directionsService.route(request, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay3.setDirections(response);
+          }
+        });
+
+
+          directionsDisplay4 = new google.maps.DirectionsRenderer({
+          suppressMarkers: true,
+          suppressInfoWindows: true,
+        });
+        directionsDisplay4.setMap(map);
+
+        var request = {
+          origin: '-41.333673, 174.740715', //2nd crossroad
+          destination: 'Red rocks, Wellington, New Zealand',//Red rocks destination
+          travelMode: google.maps.DirectionsTravelMode.WALKING
+        };
+        directionsService.route(request, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay4.setDirections(response);
+          }
+        });
+
+          directionsDisplay5 = new google.maps.DirectionsRenderer({
+          suppressMarkers: true,
+          suppressInfoWindows: true,
+        });
+        directionsDisplay5.setMap(map);
+
+        var request = {
+          origin: 'Red rocks, Wellington, New Zealand', //2nd crossroad
+          destination: '-41.348285, 174.749732',//Red rocks destination
+          travelMode: google.maps.DirectionsTravelMode.WALKING
+        };
+        directionsService.route(request, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay5.setDirections(response);
+          }
+        });
+
+
+
+      google.maps.event.addDomListener(window, 'load', initialise);
+
+
+
+
+
+   });
+ }
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

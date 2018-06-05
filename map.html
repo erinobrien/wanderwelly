@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.png"/> 
+    <title>Map</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <!-- Top navigation bar and logo -->
+    <header>
+      <nav class="black_1">
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <a href="index.html">Wander Welly</a>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="index.html#top_suggestions">Top Suggestions</a></li>
+            <li><a href="./all_trails.html">All Trails</a></li>
+            <li><a href="./map.html">Map</a></li> 
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Second section where the map is placed -->
+    <section class="section section-light" id="map_app">
+
+      <h1>MAP</h1>
+      <p>Look around to find where the trails start</p>
+      <div style="padding: 15px">
+      <div id="map"></div>
+      </div>
+
+    </section> 
+
+
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5qIlepBMBLfr6DEB_6OB6JfKtyErWYRk&callback=initMap">
+    </script>
+
+    <script src="./js/script.js"></script>
+
+    <script type="text/javascript">
+      function _width(){
+        var _width = $(window).width();
+        if(_width < 640){
+          $('.logo').addClass('hide');
+        }else{
+          $('.logo').removeClass('hide');
+        }
+      }
+      $(document).ready( function(){
+
+            // goes to the initSite() method in the script.js file
+            initSite();
+
+            $(".menu-icon").on("click", function() {
+              $("nav ul").toggleClass("showing");
+              $(".logo").toggleClass("hide");
+            });
+
+            $(window).resize(function() {    
+              _width();  
+            })
+            _width();
+        });
+
+      $(window).on("scroll", function() {
+        if($(window).scrollTop()) {
+          $('nav').addClass('black');
+        }
+        else {
+          $('nav').removeClass('black');
+        }
+      })
+
+      // $(".img").hover(function() {
+      //      $(this).find('.ptext').show(); 
+      //   },
+      // function() {
+      //     $('.img .ptext').hide();
+      // });
+
+      $(document).on('mouseover', '.img', function(){
+        $(this).find('.ptext').show(); 
+      });
+
+      $(document).on('mouseout','.img', function(){
+        $('.img .ptext').hide();
+      });
+
+
+      var _h = document.body.offsetHeight;   
+  var map_app = 'height:' + _h + 'px !important';
+  $('#map_app').attr('style', map_app);
+
+  var map = _h - 220;
+ map  = 'height:' + map + 'px !important';
+  $('#map').attr('style', map);
+
+$(document).on('click', '.btn touchstart', function(){
+  window.location.href = './mtvic.html';
+})
+
+
+    </script>
+  </body>
+</html>
